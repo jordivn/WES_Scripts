@@ -73,8 +73,8 @@ cd /etc/mail/spamassassin >> /var/log/sa-learn/overall.log
 /usr/bin/wget -N https://dutchspamassassinrules.nl/DSR/DSR.cf >> /var/log/sa-learn/overall.log
 /usr/bin/wget -N https://www.pccc.com/downloads/SpamAssassin/contrib/KAM.cf >> /var/log/sa-learn/overall.log
 echo "Downloaded DSR & KAM" >> /var/log/sa-learn/overall.log
-echo "Restarting spamassassin" >> /var/log/sa-learn/overall.log
-systemctl restart spamassassin >> /var/log/sa-learn/overall.log
+echo "Restarting RSPAMD" >> /var/log/sa-learn/overall.log
+systemctl restart rspamd >> /var/log/sa-learn/overall.log
 echo "DSR & KAM update done" >> /var/log/sa-learn/overall.log
 rm -f $spamfile
 rm -fr $spamfile_unpacked
