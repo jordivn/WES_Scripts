@@ -61,7 +61,7 @@ chown $USER:$USER /home/$USER/.spamassassin/bayes_*
 echo "=== Done ===" >> $LOGPATH$USER.log
 done
 echo "Info" >> /var/log/sa-learn/overall.log
-echi rspamc -h /var/run/rspamd/rspamd_controller.sock stat >> /var/log/sa-learn/overall.log
+echo rspamc -h /var/run/rspamd/rspamd_controller.sock stat >> /var/log/sa-learn/overall.log
 echo "===-------===" >>  /var/log/sa-learn/overall.log
 echo $(date +%F) >>  /var/log/sa-learn/overall.log
 echo "=============" >> /var/log/sa-learn/overall.log
